@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.card {
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-config {
+    height: 40rem;
+    width: 25rem;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s ease;
+}
+
+.front {
+    background-color: lightskyblue;
+}
+.card:hover .front {
+    background-color: lightskyblue;
+    transform: rotateY(-180deg);
+}
+
+.back {
+    background-color: lightseagreen;
+    transform: rotateY(180deg);
+}
+.card:hover .back {
+    transform: rotateY(0deg);
+}
